@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <div class="profile">
+          <img src="images/image-jeremy.png" alt="avatar" />
+          <div class="profile-description">
+            <p>Report for</p>
+            <p class="userName">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="menu">
+          <p class="daily time" data-time="daily" data-label-time="Day">
+            Daily
+          </p>
+          <p
+            class="weekly time active"
+            data-time="weekly"
+            data-label-time="Week"
+          >
+            Weekly
+          </p>
+          <p class="monthly time" data-time="monthly" data-label-time="Month">
+            Monthly
+          </p>
+        </div>
+      </div>
+      <div class="card work">
+        <div class="description">
+          <div class="title">
+            <h3>Work</h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-setting" />
+          </div>
+          <div class="content">
+            <p class="now-time_spent work-now">32hrs</p>
+            <p class="previous-time_spent work-previous">Last Week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card play">
+        <div class="description">
+          <div class="title">
+            <h3>Play</h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-setting" />
+          </div>
+          <div class="content">
+            <p class="now-time_spent play-now">10hrs</p>
+            <p class="previous-time_spent play-previous">Last Week - 8hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card study">
+        <div class="description">
+          <div class="title">
+            <h3>Study</h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-setting" />
+          </div>
+          <div class="content">
+            <p class="now-time_spent study-now">4hrs</p>
+            <p class="previous-time_spent study-previous">Last Week - 3hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card exercise">
+        <div class="description">
+          <div class="title">
+            <h3>Exercise</h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-setting" />
+          </div>
+          <div class="content">
+            <p class="now-time_spent exercise-now">4hrs</p>
+            <p class="previous-time_spent exercise-previous">
+              Last Week - 5hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card social">
+        <div class="description">
+          <div class="title">
+            <h3>Social</h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-setting" />
+          </div>
+          <div class="content">
+            <p class="now-time_spent social-now">5hrs</p>
+            <p class="previous-time_spent social-previous">Last Week - 10hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card self-care">
+        <div class="description">
+          <div class="title">
+            <h3>Self Care</h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-setting" />
+          </div>
+          <div class="content">
+            <p class="now-time_spent self-care-now">2hrs</p>
+            <p class="previous-time_spent self-care-previous">
+              Last Week - 4hrs
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/abimh66" target="_blank">abimh66</a>.
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self_care: hsl(43, 84%, 65%);
+
+  --dark_blue: hsl(235, 46%, 20%);
+  --desaturated_blue: hsl(235, 45%, 35%);
+  --pale_blue: hsl(236, 100%, 87%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 225px 225px;
+  grid-template-areas:
+    "header content1 content2 content3"
+    "header content4 content5 content6";
+  gap: 20px;
+  row-gap: 25px;
+}
+
+/*-------------------- LAYOUT SETTING -----------------------*/
+.header {
+  grid-area: header;
+}
+.work {
+  grid-area: content1;
+  background-color: var(--work);
+  background-image: url("images/icon-work.svg");
+}
+.play {
+  grid-area: content2;
+  background-color: var(--play);
+  background-image: url("images/icon-play.svg");
+}
+.study {
+  grid-area: content3;
+  background-color: var(--study);
+  background-image: url("images/icon-study.svg");
+}
+.exercise {
+  grid-area: content4;
+  background-color: var(--exercise);
+  background-image: url("images/icon-exercise.svg");
+}
+.social {
+  grid-area: content5;
+  background-color: var(--social);
+  background-image: url("images/icon-social.svg");
+}
+.self-care {
+  grid-area: content6;
+  background-color: var(--self_care);
+  background-image: url("images/icon-self-care.svg");
+}
+
+/*------------------ HEADER SETTING ------------------*/
+.header {
+  border-radius: 10px;
+  background-color: hsl(235, 46%, 20%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.active {
+  color: white;
+}
+.profile {
+  height: 70%;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  color: white;
+}
+.profile img {
+  width: 40%;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-bottom: 30px;
+}
+.userName {
+  font-weight: 300;
+  font-size: 40px;
+}
+.menu {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--pale_blue);
+}
+.menu p {
+  cursor: pointer;
+}
+.menu p:hover {
+  color: white;
+}
+
+/*--------------------- CONTENTS SETTING ------------------*/
+.card {
+  border-radius: 10px;
+  position: relative;
+
+  /* bg setting */
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position-x: 90%;
+  background-position-y: -5px;
+}
+.description {
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark_blue);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+.description:hover {
+  background-color: var(--desaturated_blue);
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.now-time_spent {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.previous-time_spent {
+  color: var(--pale_blue);
+}
+
+/*----------------- Attribution ------------------*/
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.attribution a:link,
+.attribution a:visited {
+  color: white;
+}
+.attribution a:hover {
+  color: hsl(228, 45%, 44%);
+}
+
+/*----------------- RESPONSIVE SETTING ---------------*/
+@media (max-width: 640px) {
+  body {
+    height: 100%;
+    padding: 50px 5% 5% 5%;
+    gap: 1rem;
+  }
+  main {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 200px);
+    grid-template-areas: "header" "content1" "content2" "content3" "content4" "content5" "content6";
+  }
+
+  /* ------------------------------------- */
+  .profile {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px 0px 0px 30px;
+  }
+  .profile img {
+    width: 20%;
+  }
+  .userName {
+    font-size: 30px;
+  }
+  .menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* ------------------------------------- */
+  .description {
+    height: 70%;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
