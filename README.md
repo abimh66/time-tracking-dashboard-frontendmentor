@@ -38,8 +38,8 @@ Objektif pada project ini:
 
 ### Links
 
-- Solution URL: [Solution Codee](https://github.com/abimh66/sunnyside-agency-landing-page-main)
-- Live Site URL: [live site](https://sunnyside-abimh66.netlify.app/)
+- Solution URL: [Solution Code](https://github.com/abimh66/time-tracking-dashboard-frontendmentor)
+- Live Site URL: [live site](https://time-tracking-abimh66.netlify.app/)
 
 ## Proses
 
